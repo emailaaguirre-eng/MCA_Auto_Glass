@@ -1,0 +1,34 @@
+<svg width="250" height="100" viewBox="0 0 250 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- White outline effect -->
+    <filter id="outline">
+      <feMorphology operator="dilate" radius="1.5" in="SourceAlpha" result="thicken"/>
+      <feFlood flood-color="#FFFFFF" result="white"/>
+      <feComposite in="white" in2="thicken" operator="in" result="outline"/>
+      <feComposite in="SourceGraphic" in2="outline" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background (transparent for web use) -->
+  <rect width="250" height="100" fill="transparent"/>
+  
+  <!-- MCA Text - Large Serif with white outline, dark gray fill -->
+  <g filter="url(#outline)">
+    <!-- M -->
+    <text x="15" y="50" font-family="Georgia, serif" font-size="48" font-weight="bold" fill="#4B5563">M</text>
+    
+    <!-- C with ripple effect inside -->
+    <text x="70" y="50" font-family="Georgia, serif" font-size="48" font-weight="bold" fill="#4B5563">C</text>
+    <!-- Ripple lines inside C -->
+    <path d="M 85 30 Q 90 35 90 40" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M 85 35 Q 90 40 90 45" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+    
+    <!-- A -->
+    <text x="110" y="50" font-family="Georgia, serif" font-size="48" font-weight="bold" fill="#4B5563">A</text>
+  </g>
+  
+  <!-- AUTOGLASS, LLC Text - Smaller Sans-serif -->
+  <g filter="url(#outline)">
+    <text x="15" y="75" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4B5563" letter-spacing="1px">AUTOGLASS, LLC</text>
+  </g>
+</svg>
